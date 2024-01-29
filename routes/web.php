@@ -21,3 +21,7 @@ Route::get('/components', function () {
     return view('components');
 });
 
+Route::get('/posts', function () {
+    return view('posts');
+});
+
