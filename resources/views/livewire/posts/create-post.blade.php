@@ -24,6 +24,10 @@
                         Characters:
                         <span x-text="$wire.content.length"></span>
                     </small>
+                    <small>
+                        Words:
+                        <span x-text="$wire.content.split(' ').length"></span>
+                    </small>
                     @error('content')
                         <div class="invalid-feedback">
                             {{$message}}

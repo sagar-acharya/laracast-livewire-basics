@@ -9,5 +9,11 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'content','is_archived'];
+
+    public function archieve()
+    {
+        $this->is_archived = TRUE;
+        $this->save();
+    }
 }
