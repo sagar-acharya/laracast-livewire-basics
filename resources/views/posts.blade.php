@@ -13,6 +13,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <!-- Styles -->
         @livewireStyles
+        <style>
+            [x-cloak] { display: none !important; }
+        </style>
     </head>
     <body>
         <div class="container-fluid mt-5">

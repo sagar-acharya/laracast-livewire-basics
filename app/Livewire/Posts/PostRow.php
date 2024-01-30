@@ -18,6 +18,11 @@ class PostRow extends Component
         $this->dispatch('remove-tr', post: $this->post->id);
     }
 
+    public function archieve()
+    {
+        $this->post->archieve();
+    }
+
     public function render()
     {
         return view('livewire.posts.post-row');
