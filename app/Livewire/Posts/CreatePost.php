@@ -14,6 +14,8 @@ class CreatePost extends Component
     #[Validate('required')]
     public $content = '';
 
+    public $showSuccess = FALSE;
+
     public function save()
     {
         $this->validate();
@@ -22,6 +24,10 @@ class CreatePost extends Component
             'title' => $this->title,
             'content' => $this->content,
         ]);
+
+        sleep(1);
+        $this->showSuccess = TRUE;
+        $this->reset('title','content');
     }
 
     public function render()
