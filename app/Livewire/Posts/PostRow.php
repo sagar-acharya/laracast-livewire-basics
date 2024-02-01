@@ -8,9 +8,12 @@ class PostRow extends Component
 {
     public $post;
 
+    public $showModal = false;
+
     public function mount($post)
     {
         $this->post = $post;
+        $this->showModal = false;
     }
 
     public function remove()
@@ -26,5 +29,10 @@ class PostRow extends Component
     public function render()
     {
         return view('livewire.posts.post-row');
+    }
+
+    public function openModal()
+    {
+        $this->showModal = true;
     }
 }
